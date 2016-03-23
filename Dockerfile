@@ -7,7 +7,7 @@ RUN apt-get -qq update && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-EXPOSE 80
+EXPOSE 4000
 
 ADD bin/init.sh /opt/chambana/bin/init.sh
 
