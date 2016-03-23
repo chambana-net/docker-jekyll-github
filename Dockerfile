@@ -3,11 +3,9 @@ FROM chambana/base:latest
 MAINTAINER Josh King <jking@chambana.net>
 
 RUN apt-get -qq update && \
-	apt-get install -y --no-install-recommends ruby ruby-dev git && \
+	apt-get install -y --no-install-recommends ruby ruby-dev git jekyll && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
-
-RUN gem install jekyll
 
 EXPOSE 80
 
