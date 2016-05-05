@@ -4,8 +4,8 @@
 
 CHECK_BIN "jekyll"
 CHECK_BIN "git"
-CHECK_VAR $GITHUB_USER
-CHECK_VAR $GITHUB_REPO
+CHECK_VAR GITHUB_USER
+CHECK_VAR GITHUB_REPO
 
 #If subdir not defined, set default.
 SUBDIR=${SUBDIR:-/}
