@@ -9,8 +9,8 @@ RUN apt-get -qq update && \
 
 EXPOSE 4000
 
-ADD bin/init.sh /opt/chambana/bin/init.sh
+ADD bin/init.sh /app/bin/init.sh
 
-RUN chmod +x /opt/chambana/bin/init.sh
+RUN chmod +x /app/bin/init.sh
 
-CMD ["/opt/chambana/bin/init.sh"]
+CMD ["/app/bin/init.sh"]
