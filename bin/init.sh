@@ -13,6 +13,7 @@ SUBDIR=${SUBDIR:-/}
 GITHUB_BRANCH=${GITHUB_BRANCH:-"master"}
 
 MSG "Cloning repository..."
+rm -rf /srv/www/*
 git clone -b ${GITHUB_BRANCH} --single-branch https://github.com/${GITHUB_USER}/${GITHUB_REPO} /srv/www
 [[ $? -eq 0 ]] || { ERR "Failed to clone repository, aborting."; exit 1; }
 [[ -d /srv/www/${SUBDIR} ]] || { ERR "Subdirectory $SUBDIR does not exist, aborting."; exit 1; }
