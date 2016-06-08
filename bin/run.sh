@@ -21,4 +21,5 @@ git clone -b ${GITHUB_BRANCH} --single-branch https://github.com/${GITHUB_USER}/
 MSG "Serving site..."
 cd /srv/www/${SUBDIR}
 [[ -e /srv/www/${SUBDIR}/Gemfile ]] && { bundle install } 
-jekyll serve
+
+exec "$@"

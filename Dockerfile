@@ -9,8 +9,8 @@ RUN apt-get -qq update && \
 
 EXPOSE 4000
 
-ADD bin/init.sh /app/bin/init.sh
+ADD bin/run.sh /app/bin/run.sh
+RUN chmod +x /app/bin/run.sh
 
-RUN chmod +x /app/bin/init.sh
-
-CMD ["/app/bin/init.sh"]
+ENTRYPOINT ["/app/bin/run.sh"]
+CMD ["jekyll", "serve"]
