@@ -2,6 +2,9 @@ FROM chambana/base:latest
 
 MAINTAINER Josh King <jking@chambana.net>
 
+ENV JEKYLL_GITHUB_BRANCH="master" \
+    JEKYLL_GITHUB_SUBDIR="/"
+
 RUN apt-get -qq update && \
 	apt-get install -y --no-install-recommends ruby ruby-dev git build-essential patch zlib1g-dev liblzma-dev && \
 	apt-get clean && \
