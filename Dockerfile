@@ -10,7 +10,8 @@ RUN apt-get -qq update && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/*
 
-RUN gem install jekyll bundler
+RUN gem install jekyll bundler && \
+    gem install sassc -- --disable-march-tune-native
 
 EXPOSE 4000
 
